@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Circle Packing Chart</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-circle-packing.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-data-adapter.min.js"></script>
+
+    <style type="text/css">
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    anychart.onDocumentReady(function () {
+        let data = [
+            {
+                name: "2019",
+                children: [
+                    {name: "CO2 emissions", value: 38688785},
+                    {name: "Flights", value: 1900776},
+                    {name: "COVID cases", value: 0}
+                ]
+            },
+            {
+                name: "2020",
+                children: [
+                    {name: "CO2 emissions", value: 13970171},
+                    {name: "Flights", value: 761969},
+                    {name: "COVID cases", value: 138828}
+                ]
+            },
+            {
+                name: "2021",
+                children: [
+                    {name: "CO2 emissions", value: 16412096},
+                    {name: "Flights", value: 893126},
+                    {name: "COVID cases", value: 193832}
+                ]
+            },
+            {
+                name: "2022",
+                children: [
+                    {name: "CO2 emissions", value: 26098639},
+                    {name: "Flights", value: 1386795},
+                    {name: "COVID cases", value: 230746}
+                ]
+            },
+            {
+                name: "2023",
+                children: [
+                    {name: "CO2 emissions", value: 23002430},
+                    {name: "Flights", value: 1505243},
+                    {name: "COVID cases", value: 0}
+                ]
+            }
+        ];
+
+        chart = anychart.circlePacking(data, "as-tree");
+        // title of the chart
+        chart
+            .title()
+            .enabled(true)
+            .useHtml(true)
+            .text(
+                '<span style = "color: #151414; font-size:20px;">Flights, COVID and CO2 emissions.</span>' +
+                '<br/><span style="color:#151716; font-size: 18px;">Its relationshipts during the COVID pandemic</span>'
+            );
+        chart.container("container");
+        chart.draw();
+    });
+</script>
+</body>
+</html>
