@@ -22,46 +22,42 @@
     anychart.onDocumentReady(function () {
         let data = [
             {
-                name: "CO2 emissions",
-                year: "2019",
-                value: 38688785,
+                name: "2019",
                 children: [
+                    {name: "CO2 emissions", value: 38688785},
                     {name: "Flights", value: 1900776},
                     {name: "COVID cases", value: 0}
                 ]
             },
             {
-                name: "CO2 emissions",
-                year: "2020",
+                name: "2020",
                 value: 13970171,
                 children: [
+                    {name: "CO2 emissions", value: 13970171},
                     {name: "Flights", value: 761969},
                     {name: "COVID cases", value: 1660178}
                 ]
             },
             {
-                name: "CO2 emissions",
-                year: "2021",
-                value: 16412096,
+                name: "2021",
                 children: [
+                    {name: "CO2 emissions", value: 16412096},
                     {name: "Flights", value: 893126},
                     {name: "COVID cases", value: 5353865}
                 ]
             },
             {
-                name: "CO2 emissions",
-                year: "2022",
-                value: 26098639,
+                name: "2022",
                 children: [
+                    {name: "CO2 emissions", value: 26098639},
                     {name: "Flights", value: 1386795},
                     {name: "COVID cases", value: 30227893}
                 ]
             },
             {
-                name: "CO2 emissions",
-                year: "2023",
-                value: 23002430,
+                name: "2023",
                 children: [
+                    {name: "CO2 emissions", value: 23002430},
                     {name: "Flights", value: 1505243},
                     {name: "COVID cases", value: 1195820}
                 ]
@@ -82,7 +78,7 @@
         // configure labels
         chart.labels().useHtml(true);
         chart.labels().format(
-            "<span style='font-weight:bold; color:#FFFFFF; font-size: 16px'>{%year}</span>"
+            "<span style='font-weight:bold; color:#FFFFFF; font-size: 16px'>{%name}</span>"
         );
 
         // configure colours
