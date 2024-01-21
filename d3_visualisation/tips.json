@@ -1,0 +1,22 @@
+[
+    {
+        "qty": 3,
+        "name": "Cities" 
+    },
+    {
+        "qty": 5,
+        "name": "Sports"
+    },
+    {
+        "qty": 4,
+        "name": "Studies"
+    },
+    {
+        "qty": 3.5,
+        "name": "Languages"
+    },
+    {
+        "qty": 10,
+        "name": "Works"
+    }
+]
